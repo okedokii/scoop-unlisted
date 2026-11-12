@@ -1,0 +1,36 @@
+{
+    "version": "1.2026.11.11",
+    "description": "Interactive post-processing of scanned pages: splitting, deskewing, borders, and content selection.",
+    "homepage": "https://github.com/ImageProcessing-ElectronicPublications/scantailor-experimental",
+    "license": "GPL-3.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/ImageProcessing-ElectronicPublications/scantailor-experimental/releases/download/1.2026.11.11/scantailor-experimental-1.2026.11.11-qt5_win64.zip",
+            "hash": "10e1411b8b9e945a06cec4a3a1faa985b4a1083d5ef7f0384d45665dca22e114"
+        }
+    },
+    "pre_install": [
+        "if (!(Test-Path \"$dir\\scantailor-experimental.exe\")) {",
+        "    $exe = Get-ChildItem -Path $dir -Filter 'scantailor-experimental.exe' -Recurse -File | Select-Object -First 1",
+        "    if (!$exe) { throw 'scantailor-experimental.exe was not found in the downloaded archive.' }",
+        "    Get-ChildItem -LiteralPath $exe.DirectoryName -Force | Move-Item -Destination $dir -Force",
+        "}"
+    ],
+    "bin": "scantailor-experimental-cli.exe",
+    "shortcuts": [
+        [
+            "scantailor-experimental.exe",
+            "ScanTailor Experimental"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/ImageProcessing-ElectronicPublications/scantailor-experimental"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/ImageProcessing-ElectronicPublications/scantailor-experimental/releases/download/$version/scantailor-experimental-$version-qt5_win64.zip"
+            }
+        }
+    }
+}
