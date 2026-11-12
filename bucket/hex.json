@@ -1,0 +1,54 @@
+{
+    "version": "3.4.0",
+    "description": "Local voice dictation with on-device transcription and automatic paste.",
+    "homepage": "https://github.com/anomalyco/hex",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": [
+                "https://github.com/anomalyco/hex/releases/download/v3.4.0/hex-3.4.0-windows-x64.exe#/hex.exe",
+                "https://github.com/anomalyco/hex/releases/download/v3.4.0/hex-3.4.0-windows-x64.com#/hex.com"
+            ],
+            "hash": [
+                "90bf9543dee8c3c799de95cbb4ccd1c05bcb29863c7212c1bd641979e287af9e",
+                "a62386cb4b934ebf23e988e93b1ab77b4102514e2ebff361efe46d0d61fc50e7"
+            ]
+        },
+        "arm64": {
+            "url": [
+                "https://github.com/anomalyco/hex/releases/download/v3.4.0/hex-3.4.0-windows-arm64.exe#/hex.exe",
+                "https://github.com/anomalyco/hex/releases/download/v3.4.0/hex-3.4.0-windows-arm64.com#/hex.com"
+            ],
+            "hash": [
+                "9f31a38ced09e23d87d5a2e4977db3024de988275593f750f26ba6d8882b7a24",
+                "b31a0a546e4f511b4f9ec3b265388165e84b3fad43b86a4a7ec0b31e11f0540a"
+            ]
+        }
+    },
+    "bin": "hex.com",
+    "shortcuts": [
+        [
+            "hex.exe",
+            "Hex"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/anomalyco/hex"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": [
+                    "https://github.com/anomalyco/hex/releases/download/v$version/hex-$version-windows-x64.exe#/hex.exe",
+                    "https://github.com/anomalyco/hex/releases/download/v$version/hex-$version-windows-x64.com#/hex.com"
+                ]
+            },
+            "arm64": {
+                "url": [
+                    "https://github.com/anomalyco/hex/releases/download/v$version/hex-$version-windows-arm64.exe#/hex.exe",
+                    "https://github.com/anomalyco/hex/releases/download/v$version/hex-$version-windows-arm64.com#/hex.com"
+                ]
+            }
+        }
+    }
+}
