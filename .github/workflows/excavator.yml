@@ -1,0 +1,28 @@
+name: Excavator
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Every four hours (UTC).
+    - cron: '20 */4 * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: excavator
+  cancel-in-progress: false
+
+jobs:
+  excavate:
+    name: Update Scoop manifests
+    runs-on: windows-latest
+    timeout-minutes: 60
+    steps:
+      - name: Checkout bucket
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Check and update all manifests
+        uses: ScoopInstaller/GithubActions@5bceeda181721d9d10a18fdcc3ddca6f33467ae6 # v3.0.0
+        env:
+          SKIP_UPDATED: '1'
+          THROW_ERROR: '1'
