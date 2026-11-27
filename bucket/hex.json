@@ -1,27 +1,27 @@
 {
-    "version": "3.5.0",
+    "version": "3.5.1",
     "description": "Local voice dictation with on-device transcription and automatic paste.",
     "homepage": "https://github.com/anomalyco/hex",
     "license": "MIT",
     "architecture": {
         "64bit": {
             "url": [
-                "https://github.com/anomalyco/hex/releases/download/v3.5.0/hex-3.5.0-windows-x64.exe#/hex.exe",
-                "https://github.com/anomalyco/hex/releases/download/v3.5.0/hex-3.5.0-windows-x64.com#/hex.com"
+                "https://github.com/anomalyco/hex/releases/download/v3.5.1/hex-3.5.1-windows-x64.exe#/hex.exe",
+                "https://github.com/anomalyco/hex/releases/download/v3.5.1/hex-3.5.1-windows-x64.com#/hex.com"
             ],
             "hash": [
-                "1f13c0f4b1b88e1dafa62d251f7ca1b0a2ff5654ab68c90f97219e3368b8baf1",
-                "906d99771022e3caf21359439771d5a17fe26bc7f7ca9276f63133a4a0f0aa01"
+                "136798663f0c986d55c6427d99df7ddd46f21efb6c19e7659c3470c035db7151",
+                "935fdb6fbca60cc4b6709d93de40b5cc7d41bab62ea8d6a118bb7f8737ed2027"
             ]
         },
         "arm64": {
             "url": [
-                "https://github.com/anomalyco/hex/releases/download/v3.5.0/hex-3.5.0-windows-arm64.exe#/hex.exe",
-                "https://github.com/anomalyco/hex/releases/download/v3.5.0/hex-3.5.0-windows-arm64.com#/hex.com"
+                "https://github.com/anomalyco/hex/releases/download/v3.5.1/hex-3.5.1-windows-arm64.exe#/hex.exe",
+                "https://github.com/anomalyco/hex/releases/download/v3.5.1/hex-3.5.1-windows-arm64.com#/hex.com"
             ],
             "hash": [
-                "258ecaead31ead69cf1309772b483c9c7f681dcb76de4de8dea0136c961522fe",
-                "57c1f21fe9211b911aa1a3ac2a240678be1c757b1f63fbdecdcdf3d2fdefa67a"
+                "f7db8b2bffc68f4c9e6d665e59eb11c1495852bd3f1ff360a35787c8a4226289",
+                "fa0ebe351fff1873feb41ecfbbec4d0cb3e3ade88c640db70933e20846466535"
             ]
         }
     },
